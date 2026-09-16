@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "jeffmtb.moon-phase",
+  "name": "Moon Phase",
+  "version": "1.0.0",
+  "author": "Jeffrey Lee",
+  "license": "MIT",
+  "description": "A local lunar phase widget with mathematically rendered lunar shading.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Moon Phase",
+    "description": "Local lunar phase, rendered shading, and illumination.",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
