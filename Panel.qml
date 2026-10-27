@@ -73,7 +73,7 @@ Panel {
                 }
                 Text {
                     width: parent.width
-                    text: root.hostWidget ? Number(root.hostWidget.moon.age).toFixed(1) + " days into the lunar cycle" : ""
+                    text: root.hostWidget ? Math.round(root.hostWidget.moon.illumination * 100) + "% lit · " + Number(root.hostWidget.moon.age).toFixed(1) + " days into the cycle" : ""
                     color: Color.foreground
                     opacity: 0.62
                     font.pixelSize: Style.font.caption
@@ -109,7 +109,7 @@ Panel {
                             }
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
-                                text: Moon.formatDate(modelData.date)
+                                text: modelData.name + "  ·  " + Moon.formatDate(modelData.date)
                                 color: Color.foreground
                                 opacity: 0.72
                                 textFormat: Text.PlainText
